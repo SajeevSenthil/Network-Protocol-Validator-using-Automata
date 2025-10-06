@@ -1,0 +1,154 @@
+Raw input received from D:\1. FLA\FLA\protocol-validator\protocol-validator\error.json : [
+  {
+    "id": 1,
+    "description": "Mismatched bracket (expected ']' but got '}')",
+    "request": {
+      "method": "POST",
+      "url": "/api/users",
+      "headers": {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      "body": {
+        "user": {
+          "roles": ["admin", "editor"}
+        }
+      }
+    }
+  },
+  {
+    "id": 2,
+    "description": "Unbalanced JSON (missing closing brace)",
+    "request": {
+      "method": "POST",
+      "url": "/api/data",
+      "headers": {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      "body": {
+        "profile": {
+          "name": "Alice",
+          "age": 23
+        }
+      }
+    }
+    // Missing closing }
+  },
+  {
+    "id": 3,
+    "description": "Invalid HTTP method",
+    "request": {
+      "method": "FETCH",
+      "url": "/api/test",
+      "headers": {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      "body": {}
+    }
+  },
+  {
+    "id": 4,
+    "description": "Missing required header 'Accept'",
+    "request": {
+      "method": "POST",
+      "url": "/api/login",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "username": "bob",
+        "password": "secret"
+      }
+    }
+  },
+  {
+    "id": 5,
+    "description": "Malformed JSON (extra comma in array)",
+    "request": {
+      "method": "POST",
+      "url": "/api/items",
+      "headers": {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      "body": {
+        "items": ["pen", "pencil", ]
+      }
+    }
+  }
+]
+
+
+==================== ERRORS DETECTED ====================
+[
+  {
+    "error_type": "Mismatched bracket",
+    "line": 14,
+    "position": 349,
+    "pda_stack_state": [
+      "object"
+    ],
+    "suggestion": "Unmatched '}'"
+  },
+  {
+    "error_type": "Mismatched bracket",
+    "line": 15,
+    "position": 360,
+    "pda_stack_state": [
+      "object"
+    ],
+    "suggestion": "Unmatched '}'"
+  },
+  {
+    "error_type": "Mismatched bracket",
+    "line": 16,
+    "position": 369,
+    "pda_stack_state": [
+      "object"
+    ],
+    "suggestion": "Unmatched '}'"
+  },
+  {
+    "error_type": "Mismatched bracket",
+    "line": 17,
+    "position": 376,
+    "pda_stack_state": [
+      "object"
+    ],
+    "suggestion": "Unmatched '}'"
+  },
+  {
+    "error_type": "Mismatched bracket",
+    "line": 18,
+    "position": 381,
+    "pda_stack_state": [
+      "object"
+    ],
+    "suggestion": "Unmatched '}'"
+  },
+  {
+    "error_type": "Mismatched bracket",
+    "line": 37,
+    "position": 793,
+    "pda_stack_state": [
+      "object"
+    ],
+    "suggestion": "Unmatched '}'"
+  },
+  {
+    "error_type": "Unbalanced JSON",
+    "line": 81,
+    "position": 1731,
+    "pda_stack_state": [
+      "array",
+      "object",
+      "object",
+      "object",
+      "object"
+    ],
+    "suggestion": "Add missing closing brackets/braces"
+  }
+]
+================== END OF ERRORS ==================
