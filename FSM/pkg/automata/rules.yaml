@@ -1,0 +1,111 @@
+# Top-level (global) commands
+GLOBAL:
+  - "^version [0-9.]+$"
+  - "^hostname \\S+$"
+  - "^service .+$"
+  - "^no service .+$"
+  - "^logging .+$"
+  - "^aaa .+$"
+  - "^clock .+$"
+  - "^no ip cef$"
+  - "^no ipv6 cef$"
+  - "^ip domain name .+$"
+  - "^ip name-server .+$"
+  - "^crypto pki .+$"
+  - "^archive$"
+  - "^username .+$"
+  - "^bridge .+$"
+  - "^ip http .+$"
+  - "^ip ssh .+$"
+  - "^snmp-server .+$"
+  - "^tacacs server .+$"
+  - "^radius-server .+$"
+  - "^radius server .+$"
+  - "^sntp server .+$"
+  - "^no ip source-route$"
+  - "^ip forward-protocol .+$"
+  - "^ip default-gateway .+$"
+  - "^ip (tacacs|radius|ftp) source-interface .+$"
+  - "^dot11 .+$"
+  - "^ip access-list .+$"
+  - "^access-list .+$"
+  - "^bridge irb$"
+  - "^interface (Dot11Radio|GigabitEthernet|BVI).+$"
+  - "^line (con|vty) .+$"
+
+# For commands inside 'aaa group server ...'
+AAA_GROUP:
+  - "^server name .+$"
+  - "^ip tacacs source-interface .+$"
+  - "^cache .+$"
+
+# For commands inside 'aaa cache profile ...'
+AAA_CACHE_PROFILE:
+  - "^all$"
+
+# For commands inside 'dot11 ssid ...'
+DOT11_SSID:
+  - "^vlan [0-9]+$"
+  - "^authentication .+$"
+  - "^mbssid.*$"
+  - "^wpa-psk .+$"
+
+# For all interface types (GigabitEthernet, Dot11Radio, BVI, sub-interfaces)
+INTERFACE:
+  - "^no ip address$"
+  - "^ip address [0-9.]+ [0-9.]+$"
+  - "^mac-address .+$"
+  - "^encapsulation dot1Q [0-9]+.*$"
+  - "^duplex (auto|full|half)$"
+  - "^speed (auto|[0-9]+)$"
+  - "^no shutdown$"
+  - "^shutdown$"
+  - "^bridge-group .+$"
+  - "^ssid .+$"
+  - "^no keepalive$"
+  - "^no ip route-cache$"
+  - "^encryption .+$"
+  - "^antenna gain .+$"
+  - "^mbssid$"
+  - "^station-role .+$"
+  - "^l2-filter .+$"
+  - "^no bridge-group .+$"
+
+# For commands inside 'archive'
+ARCHIVE_CONFIG:
+  - "^log config$"
+  - "^record rc$"
+  - "^logging enable$"
+  - "^notify syslog .+$"
+  - "^hidekeys$"
+  - "^path .+$"
+  - "^write-memory$"
+  - "^time-period .+$"
+
+# For 'crypto pki trustpoint' and 'crypto pki certificate'
+CRYPTO_PKI:
+  - "^enrollment .+$"
+  - "^fqdn .+$"
+  - "^subject-name .+$"
+  - "^revocation-check .+$"
+  - "^certificate .+$"
+  - "^quit$"
+  - "^[0-9A-F\\s]+$" # For certificate hex data
+
+# For 'tacacs server <name>' and 'radius server <name>'
+SERVER_CONFIG:
+  - "^address ipv4 .+$"
+  - "^key .+$"
+
+# For 'ip access-list standard <name>'
+IP_ACL_STANDARD:
+  - "^permit .+$"
+  - "^deny .+$"
+
+# For 'line con' and 'line vty'
+LINE:
+  - "^password .+$"
+  - "^login.*$"
+  - "^transport .+$"
+  - "^logging synchronous$"
+  - "^length [0-9]+$"

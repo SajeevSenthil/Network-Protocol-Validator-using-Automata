@@ -1,0 +1,12 @@
+hostname CoreRouter-01
+!
+interface GigabitEthernet0/1
+ ip address 192.168.300.1 255.255.255.0   <-- invalid IP
+ description LAN Port
+exit
+router ospf 100
+ router-id 256.1.1.1                      <-- invalid router-id
+exit
+vlan 5000                                <-- VLAN out of range
+ name BadVLAN
+exit

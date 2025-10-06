@@ -1,0 +1,12 @@
+{
+  "status": "failed",
+  "errors": [
+    "Line 4: invalid command 'ip address 192.168.300.1 255.255.255.0   \u003c-- invalid IP' in state INTERFACE",
+    "Line 5: invalid command 'description LAN Port' in state INTERFACE",
+    "Line 6: invalid command 'exit' in state GLOBAL",
+    "Line 8: invalid command 'router-id 256.1.1.1                      \u003c-- invalid router-id' in state ROUTER",
+    "Line 9: invalid command 'exit' in state GLOBAL",
+    "Line 11: invalid command 'name BadVLAN' in state VLAN",
+    "Line 12: invalid command 'exit' in state GLOBAL"
+  ]
+}
