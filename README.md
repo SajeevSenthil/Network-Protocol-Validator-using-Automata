@@ -143,23 +143,25 @@ git commit -m "Remove tracked binary; add to .gitignore"
 git push origin main
 ```
 
-## Contributing
+## **Contributors**
 
-Contributions are welcome. Suggested steps for changes that affect behavior:
-
-1. Open an issue describing the change or bug.
-2. Create a feature branch from `main`.
-3. Add unit tests where appropriate (preferably under each package's folder) and ensure `go test ./...` passes.
-4. Submit a pull request with a clear description and any relevant test results.
-
-## License
-
-This repository does not include a license file. Add an appropriate open-source license (for example, MIT, Apache 2.0) to make reuse explicit.
-
-If you want, I can:
-- add a conservative `.gitignore` and commit it, and
-- remove the tracked binary and report files and push the cleanup commit.
-
----
-
-End of documentation.
+<table>
+  <tr>
+    <td align="center">
+      <img src="https://avatars.githubusercontent.com/SajeevSenthil?s=300" width="100" alt="Sajeev Senthil" /><br/>
+      <a href="https://github.com/SajeevSenthil"><b>Sajeev Senthil</b></a>
+    </td>
+        <td align="center">
+      <img src="https://avatars.githubusercontent.com/hari23228?s=300" width="100" alt="Hari Varthan" /><br/>
+      <a href="https://github.com/hari23228"><b>Hari Varthan</b></a>
+    </td>
+    <td align="center">
+      <img src="https://avatars.githubusercontent.com/FightKlub?s=300" width="100" alt="DJR" /><br/>
+      <a href="https://github.com/FightKlub"><b>Dennis Jerome Richard </b></a>
+    </td>
+    <td align="center">
+      <img src="https://avatars.githubusercontent.com/Jopan?s=300" width="100" alt="Jopan" /><br/>
+      <a href="https://github.com/Jopan"><b>Joseph Binu George</b></a>
+    </td>
+  </tr>
+</table>
